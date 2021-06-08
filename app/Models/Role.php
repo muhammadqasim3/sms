@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Models;
+
+use Eloquent as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+/**
+ * Class Role
+ * @package App\Models
+ * @version June 8, 2021, 1:27 pm UTC
+ *
+ * @property \Illuminate\Database\Eloquent\Collection $roleUsers
+ * @property string $name
+ * @property string $description
+ */
+class Role extends Model
+{
+    use SoftDeletes;
+
+    public $table = 'roles';
+    
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
+
+    protected $dates = ['deleted_at'];
+
+
+
+    public $fillable = [
+        'name',
+        'description'
+    ];
+
+    /**
+     * The attributes that should be casted to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+        'description' => 'string'
+    ];
+
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        'name' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'deleted_at' => 'nullable',
+        'created_at' => 'nullable',
+        'updated_at' => 'nullable'
+    ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function roleUsers()
+    {
+        return $this->hasMany(\App\Models\RoleUser::class, 'role_id');
+    }
+}
