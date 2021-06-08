@@ -57,3 +57,7 @@ Route::resource('transactions', 'TransactionController');
 Route::resource('roles', 'RoleController');
 
 Route::resource('users', 'UserController');
+
+Route::resource('admissions', 'AdmissionController');
+
+Route::resource('semesters', 'SemesterController');
