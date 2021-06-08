@@ -175,6 +175,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        # InfyOm Providers
+        Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
+
+
     ],
 
     /*
