@@ -37,10 +37,28 @@ class User extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
+    const MALE = 10;
+    const FEMALE = 20;
+
+    public static $GENDER = [
+        self::MALE => 'Male',
+        self::FEMALE => 'Female'
+    ];
+
+    const ACTIVE = 1;
+    const INACTIVE = 0;
+
+    public static $USER_STATUS = [
+        self::ACTIVE => 'Active',
+        self::INACTIVE => 'Inactive'
+    ];
 
     protected $dates = ['deleted_at'];
 
-
+    public $with = [
+        'roles'
+      ];
+  
 
     public $fillable = [
         'name',
@@ -120,4 +138,14 @@ class User extends Model
     {
         return $this->hasMany(\App\Models\RoleUser::class, 'user_id');
     }
+
+    public function roles(){
+        return $this->belongsToMany(Role::class);
+    }
+
+    // dynamic attribute for showing multiple roles
+    public function getRolesCsvAttribute(){
+        return implode(",", $this->roles->pluck('name')->all());
+    }
+    
 }

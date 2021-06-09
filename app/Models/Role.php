@@ -27,6 +27,19 @@ class Role extends Model
     protected $dates = ['deleted_at'];
 
 
+    const SUPERADMIN = 10;
+    const PRINCIPLE = 20;
+    const TEACHER = 30;
+    const STAFF = 40;
+    const STUDENT = 50;
+
+    public static $ROLES = [
+        self::SUPERADMIN => 'Super Admin',
+        self::PRINCIPLE => 'Principle',
+        self::TEACHER => 'Teacher',
+        self::STAFF => 'Staff',
+        self::STUDENT => 'Student'
+    ];
 
     public $fillable = [
         'name',
@@ -60,6 +73,11 @@ class Role extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
+
+    public function user(){
+        return $this->belongsToMany(User::class);
+    }
+
     public function roleUsers()
     {
         return $this->hasMany(\App\Models\RoleUser::class, 'role_id');

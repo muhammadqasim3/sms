@@ -27,13 +27,28 @@ class Course extends Model
 
     protected $dates = ['deleted_at'];
 
+    const STATUS_ACTIVE = 1;
+    const STATUS_INACTIVE = 0;
 
+    public static $CourseStatus = [
+        self::STATUS_ACTIVE => "Active",
+        self::STATUS_INACTIVE => "Inactive"
+    ];
+
+    public static $CourseStatusCssColor = [
+        self::STATUS_ACTIVE => "success",
+        self::STATUS_INACTIVE => "danger"
+    ];
 
     public $fillable = [
         'name',
         'code',
         'description',
         'status'
+    ];
+
+    protected $appends = [
+        'course_status_css'
     ];
 
     /**
@@ -64,5 +79,9 @@ class Course extends Model
         'updated_at' => 'nullable'
     ];
 
+    public function getCourseStatusCssAttribute() {
+        return '<span class="label label-' . self::$CourseStatusCssColor[$this->status] . '">' . ucwords(str_replace('_', ' ',
+            self::$CourseStatus[$this->status])) . '</span>';
+    }
     
 }

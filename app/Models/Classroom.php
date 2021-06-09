@@ -24,6 +24,24 @@ class Classroom extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
+    const STATUS_RESERVED = 0;
+    const STATUS_AVAILABLE = 1;
+
+    public static $ClassroomStatus = [
+        self::STATUS_RESERVED => "Reserved",
+        self::STATUS_AVAILABLE => "Available"
+    ];
+
+    public static $ClassroomStatusCssColor = [
+        self::STATUS_AVAILABLE => "success",
+        self::STATUS_RESERVED => "danger"
+    ];
+
+
+
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
 
     protected $dates = ['deleted_at'];
 
@@ -35,6 +53,12 @@ class Classroom extends Model
         'description',
         'status'
     ];
+
+
+    protected $appends = [
+        'classroom_status_css'
+    ];
+
 
     /**
      * The attributes that should be casted to native types.
@@ -64,5 +88,9 @@ class Classroom extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+    public function getClassroomStatusCssAttribute() {
+        return '<span class="label label-' . self::$ClassroomStatusCssColor[$this->status] . '">' . ucwords(str_replace('_', ' ',
+                self::$ClassroomStatus[$this->status])) . '</span>';
+    }
+
 }
