@@ -55,7 +55,7 @@ class CourseController extends AppBaseController
     public function store(CreateCourseRequest $request)
     {
         $input = $request->all();
-
+        $status = Course::$CourseStatus;
         $course = $this->courseRepository->create($input);
 
         Flash::success('Course saved successfully.');
@@ -93,7 +93,8 @@ class CourseController extends AppBaseController
     public function edit($id)
     {
         $course = $this->courseRepository->find($id);
-
+        $status = Course::$CourseStatus;
+        
         if (empty($course)) {
             Flash::error('Course not found');
 

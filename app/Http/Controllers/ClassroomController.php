@@ -42,6 +42,7 @@ class ClassroomController extends AppBaseController
      */
     public function create()
     {
+        $status = Classroom::$ClassroomStatus;
         return view('classrooms.create');
     }
 
@@ -92,6 +93,7 @@ class ClassroomController extends AppBaseController
      */
     public function edit($id)
     {
+        $status = Classroom::$ClassroomStatus;
         $classroom = $this->classroomRepository->find($id);
 
         if (empty($classroom)) {

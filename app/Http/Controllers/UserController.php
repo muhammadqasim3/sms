@@ -42,7 +42,8 @@ class UserController extends AppBaseController
      */
     public function create()
     {
-        return view('users.create');
+        $roles = Role::all()->pluck('name', 'id');       
+        return view('users.create')->with(['roles' => $roles]);
     }
 
     /**
@@ -58,6 +59,9 @@ class UserController extends AppBaseController
 
         $user = $this->userRepository->create($input);
 
+        if($request->roles) {
+            $user->roles()->sync($request->roles);
+        }
         Flash::success('User saved successfully.');
 
         return redirect(route('users.index'));
@@ -93,6 +97,7 @@ class UserController extends AppBaseController
     public function edit($id)
     {
         $user = $this->userRepository->find($id);
+        $roles = Role::all()->pluck('name', 'id');
 
         if (empty($user)) {
             Flash::error('User not found');
@@ -100,7 +105,7 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        return view('users.edit')->with('user', $user);
+        return view('users.edit')->with(['user'=> $user, 'roles' => $roles]);
     }
 
     /**
@@ -114,7 +119,8 @@ class UserController extends AppBaseController
     public function update($id, UpdateUserRequest $request)
     {
         $user = $this->userRepository->find($id);
-
+        $request['password'] = bcrypt($request['password']);
+        
         if (empty($user)) {
             Flash::error('User not found');
 
@@ -122,7 +128,9 @@ class UserController extends AppBaseController
         }
 
         $user = $this->userRepository->update($request->all(), $id);
-
+        if($request->roles) {
+            $user->roles()->sync($request->roles);
+        }
         Flash::success('User updated successfully.');
 
         return redirect(route('users.index'));
