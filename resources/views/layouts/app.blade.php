@@ -34,6 +34,9 @@
 
     @yield('third_party_stylesheets')
 
+    <link rel="stylesheet" link="css/" crossorigin="anonymous"/>
+
+
     @stack('page_css')
 </head>
 

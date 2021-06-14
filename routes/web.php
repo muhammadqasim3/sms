@@ -13,18 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
+# Front-end Routes
+Route::get('/', 'Frontend\\HomeController@index')->name('front.index');
+
+
+# Admin Routes
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-// Auth::routes(['verify' => true]);
-
-// Route::get('/home', 'HomeController@index')->middleware('verified');
 
 Route::resource('classes', 'ClassesController');
 
