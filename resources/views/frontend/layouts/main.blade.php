@@ -7,12 +7,8 @@
 <link href="{{ asset('frontend/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
 <div class="wrapper row0">
   <div id="topbar" class="clear"> 
-    <!-- ################################################################################################ -->
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -22,15 +18,10 @@
         <li><a href="#">Staff Login</a></li>
       </ul>
     </nav>
-    <!-- ################################################################################################ --> 
   </div>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
 <div class="wrapper row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
       <h1><a href="index.html">Academic Education V2</a></h1>
       <p>Free Website Template</p>
@@ -44,16 +35,11 @@
         </fieldset>
       </form>
     </div>
-    <!-- ################################################################################################ --> 
   </header>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
 <div class="wrapper row2">
   <div class="rounded">
     <nav id="mainav" class="clear"> 
-      <!-- ################################################################################################ -->
       <ul class="clear">
         <li class="active"><a href="index.html">Home</a></li>
         <li><a class="drop" href="#">Pages</a>
@@ -84,17 +70,12 @@
         <li><a href="#">This a very long link</a></li>
         <li><a href="#">This is the last</a></li>
       </ul>
-      <!-- ################################################################################################ --> 
     </nav>
   </div>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
 <div class="wrapper">
   <div id="slider">
     <div id="slide-wrapper" class="rounded clear"> 
-      <!-- ################################################################################################ -->
       <figure id="slide-1"><a class="view" href="#"><img src="{{ asset('frontend/images/demo/slider/1.png') }}" alt=""></a>
         <figcaption>
           <h2>Nullamlacus dui ipsum</h2>
@@ -130,7 +111,6 @@
           <p class="right"><a href="#">Continue Reading &raquo;</a></p>
         </figcaption>
       </figure>
-      <!-- ################################################################################################ -->
       <ul id="slide-tabs">
         <li><a href="#slide-1">All About The University</a></li>
         <li><a href="#slide-2">Why You Should Study With Us</a></li>
@@ -138,35 +118,23 @@
         <li><a href="#slide-4">Alumni And Its Donors</a></li>
         <li><a href="#slide-5">Latest University News &amp; Events</a></li>
       </ul>
-      <!-- ################################################################################################ --> 
     </div>
   </div>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
 <div class="wrapper row3">
   <div class="rounded">
     <main class="container clear"> 
-      <!-- main body --> 
-      <!-- ################################################################################################ -->
       <div class="group btmspace-30"> 
-        <!-- Left Column -->
         <div class="one_quarter first"> 
-          <!-- ################################################################################################ -->
-          <ul class="nospace">
-     
-          <li class="btmspace-15"><a href="#"><em class="heading">Prospective Students</em> <img class="borderedbox" src="{{ asset('frontend/images/demo/220x95.gif') }}" alt=""></a></li>
+        <ul class="nospace">
+            <li class="btmspace-15"><a href="#"><em class="heading">Prospective Students</em> <img class="borderedbox" src="{{ asset('frontend/images/demo/220x95.gif') }}" alt=""></a></li>
             <li class="btmspace-15"><a href="#"><em class="heading">Current Students</em> <img class="borderedbox" src="{{ asset('frontend/images/demo/220x95.gif') }}" alt=""></a></li>
             <li class="btmspace-15"><a href="#"><em class="heading">International Students</em> <img class="borderedbox" src="{{ asset('frontend/images/demo/220x95.gif') }}" alt=""></a></li>
             <li><a href="#"><em class="heading">Alumni</em> <img class="borderedbox" src="{{ asset('frontend/images/demo/220x95.gif') }}" alt=""></a></li>
         </ul>
-          <!-- ################################################################################################ --> 
         </div>
-        <!-- / Left Column --> 
-        <!-- Middle Column -->
         <div class="one_half"> 
-          <!-- ################################################################################################ -->
+
           <h2>Latest News &amp; Events</h2>
           <ul class="nospace listing">
             <li class="clear">
@@ -186,12 +154,8 @@
             </li>
           </ul>
           <p class="right"><a href="#">Click here to view all of the latest news and events &raquo;</a></p>
-          <!-- ################################################################################################ --> 
         </div>
-        <!-- / Middle Column --> 
-        <!-- Right Column -->
         <div class="one_quarter sidebar"> 
-          <!-- ################################################################################################ -->
           <div class="sdb_holder">
             <h6>Virtual Tour</h6>
             <div class="mediacontainer"><img src="{{ asset('frontend/images/demo/video.gif') }}" alt="">
@@ -205,12 +169,8 @@
               <li class="clear"><a href="#"><img src="{{ asset('frontend/images/demo/80x80.gif') }}" alt=""> Order A Prospectus</a></li>
             </ul>
           </div>
-          <!-- ################################################################################################ --> 
         </div>
-        <!-- / Right Column --> 
       </div>
-      <!-- ################################################################################################ --> 
-      <!-- ################################################################################################ -->
       <div id="twitter" class="group btmspace-30">
         <div class="one_quarter first center"><a href="#"><i class="fa fa-twitter fa-3x"></i><br>
           Follow Us On Twitter</a></div>
@@ -218,12 +178,9 @@
           <p>Inteligula congue id elis donec sce sagittis intes id laoreet aenean. Massawisi condisse leo sem ac tincidunt nibh quis dui fauctor et donecnibh elis velit <a href="#">@name</a> - 10:15 AM yesterday</p>
         </div>
       </div>
-      <!-- ################################################################################################ --> 
-      <!-- ################################################################################################ -->
       <div class="group">
         <h2>Quickly Find What You Are Looking For</h2>
         <div class="one_quarter first"> 
-          <!-- ################################################################################################ -->
           <ul class="nospace">
             <li><a href="#">Academic Advisory</a></li>
             <li><a href="#">Academic Assistance</a></li>
@@ -238,10 +195,8 @@
             <li><a href="#">Campus Recreation</a></li>
             <li><a href="#">Campus Safety &amp; Security</a></li>
           </ul>
-          <!-- ################################################################################################ --> 
         </div>
         <div class="one_quarter"> 
-          <!-- ################################################################################################ -->
           <ul class="nospace">
             <li><a href="#">Class Schedules</a></li>
             <li><a href="#">Counselling Center</a></li>
@@ -256,10 +211,8 @@
             <li><a href="#">Graduate</a></li>
             <li><a href="#">Graduate Admissions</a></li>
           </ul>
-          <!-- ################################################################################################ --> 
         </div>
         <div class="one_quarter"> 
-          <!-- ################################################################################################ -->
           <ul class="nospace">
             <li><a href="#">Graduate Health Services</a></li>
             <li><a href="#">Graduate Housing</a></li>
@@ -274,10 +227,8 @@
             <li><a href="#">Language Resources</a></li>
             <li><a href="#">Maps and Directions</a></li>
           </ul>
-          <!-- ################################################################################################ --> 
         </div>
         <div class="one_quarter"> 
-          <!-- ################################################################################################ -->
           <ul class="nospace">
             <li><a href="#">Office of the Registrar</a></li>
             <li><a href="#">Online Learning</a></li>
@@ -292,22 +243,17 @@
             <li><a href="#">Student Group Directory</a></li>
             <li><a href="#">Student Life</a></li>
           </ul>
-          <!-- ################################################################################################ --> 
         </div>
       </div>
-      <!-- ################################################################################################ --> 
       <!-- / main body -->
       <div class="clear"></div>
     </main>
   </div>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
+
 <div class="wrapper row4">
   <div class="rounded">
     <footer id="footer" class="clear"> 
-      <!-- ################################################################################################ -->
       <div class="one_third first">
         <figure class="center"><img class="btmspace-15" src="{{ asset('frontend/images/demo/worldmap.png') }}" alt="">
           <figcaption><a href="#">Find Us With Google Maps &raquo;</a></figcaption>
@@ -341,18 +287,12 @@
           </fieldset>
         </form>
       </div>
-      <!-- ################################################################################################ --> 
     </footer>
   </div>
 </div>
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ --> 
-<!-- ################################################################################################ -->
 <div class="wrapper row5">
   <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
     <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
-     <!-- ################################################################################################ --> 
   </div>
 </div>
 <!-- JAVASCRIPTS --> 
